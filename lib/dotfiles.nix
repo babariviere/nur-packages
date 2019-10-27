@@ -28,7 +28,7 @@ in {
     imports:
     foldl (m: path:
       let
-        optionsPath = path + ./options.nix;
+        optionsPath = path + /options.nix;
         extraOptions =
           if builtins.pathExists optionsPath then import optionsPath else { };
         name = builtins.baseNameOf path;
